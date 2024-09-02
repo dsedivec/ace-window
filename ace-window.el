@@ -537,9 +537,9 @@ Amend MODE-LINE to the mode line for the duration of the selection."
   (setq aw-action action)
   (let ((start-window (selected-window))
         (next-window-scope (cl-case aw-scope
-                             ('visible 'visible)
-                             ('global 'visible)
-                             ('frame 'frame)))
+                             (visible 'visible)
+                             (global 'visible)
+                             (frame 'frame)))
         (wnd-list (aw-window-list))
         window)
     (setq window
